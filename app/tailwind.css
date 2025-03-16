@@ -3,6 +3,44 @@
 @tailwind utilities;
 
 html,
-body {
+body {}
 
-}
+/* Example: Adjust dropdown background and shadow */
+/* .yoopta-action-menu-list-content { */
+/* max-width: none !important; */
+/* border: none !important; */
+/* max-height: none !important; */
+/* padding: 10px; */
+/* width: 400px !important; */
+/* height: 800px !important; */
+/* border: 1px solid #ccc; */
+/* background-color: #fff !important; */
+/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+/* } */
+
+/* .yoopta-action-menu-list-content .yoo-action-menu-text-xs {
+    @apply hidden;
+} */
+
+/* .yoo-action-menu-border-solid {
+    border-style: none !important;
+} */
+
+/* .yoo-action-menu-bg-\[\#FFFFFF\] {
+    background-color: transparent !important;
+    opacity: 1 !important;
+} */
+
+/* dropdown menu button active bg color */
+/* .aria-selected\:yoo-action-menu-bg-\[\#f0f0f0\][aria-selected=true] {
+    --tw-bg-opacity: 1;
+    background-color: #f0f0f0 !important;
+} */
+
+
+
+.yoopta-dropdown {
+    @apply bg-gray-800 text-white shadow-lg rounded-lg p-2;
+  }
+
+  

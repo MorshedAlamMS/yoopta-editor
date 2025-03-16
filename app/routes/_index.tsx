@@ -14,7 +14,7 @@ export const meta: MetaFunction = () => {
 export const loader: LoaderFunction = async () => {
   try {
     await connectToDB();
-    
+
     // Fetch all documents (modify as needed)
     const editorContents = await EditorContent.find().sort({ createdAt: -1 });
 
@@ -26,10 +26,10 @@ export const loader: LoaderFunction = async () => {
 };
 
 export default function Index() {
-  const data  = useLoaderData()
+  const data = useLoaderData()
   return (
     <main>
-      <Editor data={data?.data[0]?.content}/>
+      <Editor data={data?.data?.[0]?.content} />
     </main>
   );
 }

@@ -23,6 +23,7 @@
     "@yoopta/editor": "^4.9.4",
     "@yoopta/email-builder": "^4.9.2",
     "@yoopta/embed": "^4.9.4",
+    "@yoopta/exports": "^4.9.4",
     "@yoopta/file": "^4.9.4",
     "@yoopta/headings": "^4.9.4",
     "@yoopta/image": "^4.9.4",

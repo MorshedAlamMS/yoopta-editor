@@ -44,6 +44,9 @@ importers:
       '@yoopta/embed':
         specifier: ^4.9.4
         version: 4.9.4(@yoopta/editor@4.9.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@yoopta/exports':
+        specifier: ^4.9.4
+        version: 4.9.4(@yoopta/editor@4.9.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@yoopta/file':
         specifier: ^4.9.4
         version: 4.9.4(@yoopta/editor@4.9.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1875,6 +1878,13 @@ packages:
 
   '@yoopta/exports@4.9.2':
     resolution: {integrity: sha512-wJxMGrAXpdPaA3Q577MO/8dtNTv6NPhnUq498bT7Nq7sBtStvqwL2ugmS2cXYjKaAS08vB4FQqEzZ8Ze8ZqMEw==}
+    peerDependencies:
+      '@yoopta/editor': '>=4.0.0'
+      react: '>=17.0.2'
+      react-dom: '>=17.0.2'
+
+  '@yoopta/exports@4.9.4':
+    resolution: {integrity: sha512-CHwFOnM7gIXkxktNXyE9IaJrVEYo/zjpO1sl4Fd7x4jJwl5fbaHAH5ingMzfvVhOa6hUwZiOSKwFZ7XycB7iwg==}
     peerDependencies:
       '@yoopta/editor': '>=4.0.0'
       react: '>=17.0.2'
@@ -7138,6 +7148,13 @@ snapshots:
   '@yoopta/exports@4.9.2(@yoopta/editor@4.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@yoopta/editor': 4.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0)
+      marked: 13.0.3
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@yoopta/exports@4.9.4(@yoopta/editor@4.9.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@yoopta/editor': 4.9.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-react@0.112.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-dom@0.112.2(slate@0.112.0))(slate@0.112.0))(slate@0.112.0)
       marked: 13.0.3
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
