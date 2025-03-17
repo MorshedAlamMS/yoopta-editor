@@ -1,6 +1,5 @@
 import YooptaEditor, {
   createYooptaEditor,
-  useYooptaEditor,
   useYooptaFocused,
   YooptaContentValue,
   YooptaOnChangeOptions,
@@ -21,16 +20,11 @@ import { HeadingOne, HeadingThree, HeadingTwo } from '@yoopta/headings';
 import Code from '@yoopta/code';
 import Table from '@yoopta/table';
 import Divider from '@yoopta/divider';
-import ActionMenuList, { DefaultActionMenuRender } from '@yoopta/action-menu-list';
-import Toolbar, { DefaultToolbarRender } from '@yoopta/toolbar';
+import ActionMenuList from '@yoopta/action-menu-list';
+import Toolbar from '@yoopta/toolbar';
 import LinkTool, { DefaultLinkToolRender } from '@yoopta/link-tool';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { uploadToCloudinary } from '~/utils/cloudinary';
-import { CarouselPlugin } from './withCustomPlugin/customPlugins/Carousel';
-import { json, LoaderFunction } from '@remix-run/node';
-import { connectToDB } from '~/utils/db.server';
-import EditorContent from '~/module/models/editorContent';
-import { useTheme } from './provider/ThemeProvider';
 import { ButtonPlugin } from './customPlugins/buttons';
 import { ActionNotionMenuExample } from '~/NotionExample/ActionNotionMenuExample';
 import { NotionToolbar } from '~/NotionToolbar/NotionToolbar';
@@ -141,14 +135,6 @@ const Editor = ({ data }) => {
   const [value, setValue] = useState(data);
   const editor = useMemo(() => createYooptaEditor(), []);
   const selectionRef = useRef(null);
-
-  const { theme, toggleTheme } = useTheme();
-
-  const handleThemeChange = () => {
-    toggleTheme();
-    console.log('Theme changed');
-  };
-
   const onChange = async (newValue: YooptaContentValue, options: YooptaOnChangeOptions) => {
     setValue(newValue);
     console.log(newValue);
@@ -175,7 +161,6 @@ const Editor = ({ data }) => {
 
   return (
     <>
-      <button onClick={handleThemeChange}>Toggle Theme</button>
       <div
         className="md:py-[100px] md:pl-[200px] md:pr-[80px] px-[20px] pt-[80px] pb-[40px] flex justify-center dark:bg-black"
         ref={selectionRef}
@@ -191,7 +176,6 @@ const Editor = ({ data }) => {
           value={value}
           onChange={onChange}
           autoFocus={true}
-          options={{ DropdownComponent: CustomDropdown }}
         >
           <Placeholder />
         </YooptaEditor>
@@ -214,20 +198,5 @@ const Placeholder = () => {
   return null;
 };
 
-const CustomDropdown = ({ items, onSelect }: { items: any[]; onSelect: (item: any) => void }) => {
-  return (
-    <div className="absolute left-0 mt-2 w-64 bg-gray-900 text-white shadow-lg rounded-lg p-2 z-50">
-      {items.map((item) => (
-        <button
-          key={item.id}
-          className="px-4 py-2 cursor-pointer hover:bg-gray-700 rounded"
-          onClick={() => onSelect(item)}
-        >
-          {item.label}
-        </button>
-      ))}
-    </div>
-  );
-};
 
 export default Editor
