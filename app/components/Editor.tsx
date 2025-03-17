@@ -33,6 +33,7 @@ import EditorContent from '~/module/models/editorContent';
 import { useTheme } from './provider/ThemeProvider';
 import { ButtonPlugin } from './customPlugins/buttons';
 import { ActionNotionMenuExample } from '~/NotionExample/ActionNotionMenuExample';
+import { NotionToolbar } from '~/NotionToolbar/NotionToolbar';
 
 
 const plugins = [
@@ -124,7 +125,7 @@ const TOOLS = {
     tool: ActionMenuList,
   },
   Toolbar: {
-    render: DefaultToolbarRender,
+    render: NotionToolbar,
     tool: Toolbar,
   },
   LinkTool: {

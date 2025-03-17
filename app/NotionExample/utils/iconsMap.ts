@@ -12,6 +12,7 @@ import todoList from '../icons/todoList.png';
 import embed from '../icons/embed.png';
 import table from '../icons/table.png';
 import divider from '../icons/divider.png';
+import button from '../icons/button.png';
 
 export const ICONS_SRC: Record<string, string> = {
   Paragraph: text,
@@ -30,4 +31,5 @@ export const ICONS_SRC: Record<string, string> = {
   Embed: embed,
   Table: table,
   Divider: divider,
+  Button: button
 };
