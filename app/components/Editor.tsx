@@ -32,6 +32,7 @@ import { connectToDB } from '~/utils/db.server';
 import EditorContent from '~/module/models/editorContent';
 import { useTheme } from './provider/ThemeProvider';
 import { ButtonPlugin } from './customPlugins/buttons';
+import { ActionNotionMenuExample } from '~/NotionExample/ActionNotionMenuExample';
 
 
 const plugins = [
@@ -119,7 +120,7 @@ const plugins = [
 
 const TOOLS = {
   ActionMenu: {
-    render: DefaultActionMenuRender,
+    render: ActionNotionMenuExample,
     tool: ActionMenuList,
   },
   Toolbar: {

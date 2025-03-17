@@ -27,11 +27,11 @@ const ActionNotionMenuExample = (props: ActionMenuRenderProps) => {
               return (
                 <button key={item.type} type="button" className={s.item} {...getItemProps(item.type)}>
                   <div className={s.itemLeft}>
-                    <img src={icon} className={s.leftImage} />
+                    <img src={icon} className={s.leftImage} alt='icon' />
                   </div>
                   <div className={s.itemRight}>
                     <div className={s.rightTitle}>{item.title}</div>
-                    <div className={s.rightDesc}>{item.description}</div>
+                    {/* <div className={s.rightDesc}>{item.description}</div> */}
                   </div>
                 </button>
               );
