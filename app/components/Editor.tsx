@@ -32,9 +32,13 @@ import { NotionToolbar } from '~/NotionToolbar/NotionToolbar';
 
 const plugins = [
   Paragraph,
-  Table,
-  ButtonPlugin,
-
+  HeadingOne,
+  HeadingTwo,
+  HeadingThree,
+  BulletedList,
+  NumberedList,
+  TodoList,
+  Accordion,
   Divider.extend({
     elementProps: {
       divider: (props) => ({
@@ -43,18 +47,9 @@ const plugins = [
       }),
     },
   }),
-  Accordion,
-  HeadingOne,
-  HeadingTwo,
-  HeadingThree,
-  Blockquote,
   Callout,
-  NumberedList,
-  BulletedList,
-  TodoList,
-  Code,
-  Link,
-  Embed,
+  Blockquote,
+  Table,
   Image.extend({
     options: {
       async onUpload(file) {
@@ -111,6 +106,10 @@ const plugins = [
       },
     },
   }),
+  Embed,
+  Code,
+  Link,
+  ButtonPlugin,
 ];
 
 const TOOLS = {
